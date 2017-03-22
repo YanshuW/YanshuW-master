@@ -1,0 +1,175 @@
+/*styles go here*/
+html{
+  font-size: 100%;
+}
+
+ p {
+  color: #ccc;
+  font-family: 'Arvo', serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  }
+
+.italic {
+  font-style: italic;
+}
+
+  h1{
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+  background-color: #3E94C2;
+}
+
+.navigation{
+  margin:0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  color:#ffffff;
+  background-color: #FF6357;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  font-family: 'Antic Slab', serif;
+}
+
+.navigation li {
+  margin:0;
+  padding:0;
+  border-bottom: 1px solid #ccc;
+}
+
+.navigation a{
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+font-family: 'Antic Slab', serif;
+}
+
+.navigation a:hover, .navigation a:active {
+  background-color: #FFE098;
+}
+
+h1{
+  text-align: center;
+}
+
+img{
+  border:none;
+  width: 80%;
+}
+
+
+/*Colors for different parts of page */
+
+header {
+  background: none;
+}
+
+footer {
+  background:#FF6357;
+}
+
+.aside-1 {
+  background: grey;
+}
+
+.aside-2 {
+  background: grey;
+}
+
+/*Setting up flexible boxes for our content*/
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header, article, aside, footer {
+  flex: 1 100%;
+  padding: 10px;
+}
+
+/*These styles activate when the page is larger than 800px wide*/
+
+@media (min-width:800px) {
+
+    .navigation {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    aside {
+        flex: 1 auto;
+    }
+
+    article {
+		flex: 20 0px;
+	}
+
+    .aside-1 {
+        order: 1;
+    }
+
+    article {
+        order: 2;
+    }
+
+    .aside-2 {
+        order: 3;
+    }
+
+    footer {
+        order: 4;
+    }
+
+    /*These styles apply to the floated image technique*/
+
+            ========================
+
+            img {
+                width: 45%;
+                float: left;
+                margin-right: 10px;
+            }
+
+            .first {
+                margin-top: 0;
+            }
+
+
+    /*These styles apply to the Flexbox image technique */
+
+    article {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+
+    /*This code is for the first image attempt -- the object-fit property*/
+    /*img {
+        width: 45%;
+        object-fit: contain;
+    }*/
+
+    .image {
+        width: 45%;
+        margin-right: 10px;
+    }
+
+    .story {
+        width: 100%;
+    }
+
+}
